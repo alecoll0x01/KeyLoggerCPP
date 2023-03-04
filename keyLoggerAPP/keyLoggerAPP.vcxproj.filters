@@ -18,9 +18,6 @@
     <ClCompile Include="keyLoggerAPP.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="KeyboardLogger.cpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KeyboardLogger.h">

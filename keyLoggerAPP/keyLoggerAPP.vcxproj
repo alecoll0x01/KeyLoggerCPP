@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="KeyboardLogger.cpp" />
     <ClCompile Include="keyLoggerAPP.cpp" />
   </ItemGroup>
   <ItemGroup>
