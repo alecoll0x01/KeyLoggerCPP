@@ -1,4 +1,5 @@
 #include "KeyboardLogger.h"
+#include <synchapi.h>
 
 int main() {
     KeyboardLogger logger("log.txt");
